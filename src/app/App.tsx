@@ -14,8 +14,8 @@ import {
   Target,
   BarChart3,
 } from "lucide-react";
-import { Button } from "@/app/components/ui/button";
-import { Card } from "@/app/components/ui/card";
+import { Button } from "./components/ui/button";
+import { Card } from "./components/ui/card";
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -207,11 +207,16 @@ export default function App() {
                 guesswork.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg px-8 py-6">
-                  Start Free Trial
-                  <ChevronRight className="w-5 h-5 ml-2" />
-                </Button>
+              <Button
+              size="lg"
+              className="text-lg px-8 py-6"
+              onClick={() => window.open("https://tracsy.streamlit.app", "_blank")}
+              >
+              Start Free Trial
+              <ChevronRight className="w-5 h-5 ml-2" />
+              </Button>
               </div>
+
               <p className="mt-6 text-sm text-slate-500">
                 Track. Save. Grow. All without the hassle.
               </p>
